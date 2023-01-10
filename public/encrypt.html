@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name = "author" content = "put creators name here">
+  <meta name = "description" content = "Maple hackathon project">
+  <title>The Onion Cipher</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="module">
+    import { encrypt, addContainer, removeAll } from "./index.js"
+    window.encrypt = encrypt
+    window.addContainer = addContainer
+    window.removeAll = removeAll
+  </script>
+</head>
+
+<head>
+  <link rel="stylesheet" href="stylenavbar.css">
+  <script src="script.js" defer></script>
+</head>
+  
+<body>
+  <nav class="navbar">
+    <div class="brand-title">The Onion Cipher</div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="encrypt.html">Encrypt</a></li>
+        <li><a href="decrypt.html">Decrypt</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</body>
+  
+<body>
+  <h2>How to use the Encryptor:</h2>
+  <p>
+  Select algorithms from the buttons below<br>
+  Drag and drop the algorithms to rearrange the order<br>
+  Hit "Encrypt" to run your message through the algorithms from top to bottom
+  </p>
+  
+
+  <h2>Encrypt:</h2>
+  <textarea name="to_encrypt" placeholder="Enter text here" rows="5" cols="50"></textarea>
+  <button type="submit" onclick='encrypt()'><h3>Encrypt</h3></button>
+  <textarea id="encodingID" placeholder="[ Encoded message ]" rows="5" cols="50"></textarea>
+  <br>
+  
+  <!--   encoding text display<div3 id = "encodingID" style ="display: inline"> [encoded message]</div3>-->
+  <br> <br>
+  
+  <div id = "useEncryption" class="container">
+    <p>Encryption to be used</p>
+    
+    <button type="submit" onclick='addContainer("Caesar")'>Caesar</button>
+    <button type="submit" onclick='addContainer("Vigenere")'>Vigenere </button>
+    <button type="submit" onclick='addContainer("Blowfish")'>Blowfish </button>
+    <button type="submit" onclick='addContainer("SHA256")'>SHA256 </button>
+    <button type="submit" onclick='addContainer("SHA1")'>SHA1 </button>
+    <button type="submit" onclick='addContainer("MD5")'>MD5 </button>
+    <button type="submit" onclick='addContainer("Base64")'>Base64 </button>
+    <button type="submit" onclick='addContainer("Leet")'>Leet </button>
+    <button type="submit" onclick='addContainer("Morse")'>Morse </button>
+    <button type="submit" onclick='addContainer("Binary")'>Binary </button>
+    <br><br>
+    <button type="submit" onclick='removeAll()'>Clear All</button>
+  </div>
+
+  
+</body>
+
+</html>

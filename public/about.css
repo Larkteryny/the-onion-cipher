@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+
+  background-image: url("images/hack34.jpg");
+ 
+}
+.textbox{
+  background-color: #ffffff;
+  width: 35%;
+  margin: auto;
+  
+  border-radius: 25px;
+  padding: 5mm;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: center;
+}
+
+
+p
+{
+
+font: monospace;
+  color: black;
+  
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+padding: 10mm;
+}
+
